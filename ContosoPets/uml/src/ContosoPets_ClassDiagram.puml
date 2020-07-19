@@ -1,3 +1,19 @@
 @startuml ContosoPets
 
+class BaseEntity << abstract >> {
+	+Id : int
+}
+
+class Customer {
+	+FirstName : string [required] 
+	+LastName : string [required]
+	+Address : string [?]
+	+Phone : string [?]
+}
+
+class Product {
+	{field} +Name : string (req)
+	{field} +Price : decimal (18,2)
+}
+
 @enduml
